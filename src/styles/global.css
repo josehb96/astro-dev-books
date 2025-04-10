@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+body {
+  @apply grid place-content-center p-20;
+}
+
+body > div {
+  @apply container; 
+}
