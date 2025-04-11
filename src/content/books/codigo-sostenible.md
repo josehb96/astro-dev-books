@@ -1,4 +1,3 @@
-// Este bloque es el frontmatter
 ---
 title: Codigo Sostenible
 author: Carlos Blé
