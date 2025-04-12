@@ -2,7 +2,7 @@
 title: Codigo Sostenible
 author: Carlos Blé
 img: codigo-sostenible.jpg
-readtime: 1540 
+readtime: 608 
 description: Un libro que nos enseña a escribir código limpio y sostenible, con un enfoque en la calidad del software y la importancia de la colaboración en equipo.
 buy:
   spain: https://amzn.eu/d/8YyTZLn
