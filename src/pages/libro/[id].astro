@@ -1,23 +1,14 @@
 ---
 import { getCollection, render } from "astro:content";
+
+// This import is only available in the server context
+import { SHOW_BUY_BUTTON } from "astro:env/server";
+
 import Layout from "../../layouts/Layout.astro";
+import AmazonLogo from "../../components/AmazonLogo.astro";
+import BuyButton from "../../components/BuyButton.astro";
 
 export async function getStaticPaths(){
-  /* Forma manual, no conveniente */
-  /*
-  return [
-    {
-      params: { id: "codigo-sostenible" },
-      props: { title: "Código Sostenible" },
-    },
-    {
-      params: { id: "learning-typescript" },
-      props: { title: "Learning TypeScript" },
-    }
-
-    const { title } = Astro.props;
-  ]*/
-
   const books = await getCollection("books");
 
   return books.map((book) => ({
@@ -38,6 +29,10 @@ const { Content } = await render(book);
     <aside class="flex flex-col items-center gap-4">
       <a href="/" class="hover:underline opacity-70">⬅️ Volver atrás</a>
       <img transition:name={`img-${slug}`} class="rounded w-72 h-auto" src={`/${img}`} alt={title}>
+      <span class="text-xs" id="score"></span>
+      {
+        SHOW_BUY_BUTTON && <BuyButton buy={buy} />
+      }
     </aside>
 
     <main class="max-w-3xl">
@@ -48,3 +43,18 @@ const { Content } = await render(book);
     </main>
   </div>
 </Layout>
+
+<script>
+  // This import is only available in the client context
+  import { SCORE_API_ENDPOINT } from "astro:env/client";
+
+  const scoreElement = document.querySelector('#score')
+
+  fetch(SCORE_API_ENDPOINT)
+    .then(res => res.text())
+    .then(scoreValue => { 
+      if (scoreElement) {
+        scoreElement.innerHTML = `⭐ Puntuación: ${scoreValue.trim()}/5`
+      }
+    })
+</script>
