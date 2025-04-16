@@ -15,24 +15,24 @@ export const prerender = true; // Indicamos que esta página se tiene que preren
 		
 		<section aria-label="Libros recomendados para programadores">
 			<div class="px-4 mx-auto max-w-screen-xl">
-				<div class="grid gap-6 md:grid-cols-2">
+				<div class="grid gap-20 md:grid-cols-2">
 					{
 						books.map(book => {
 							const { slug, data } = book
 							const { title, author, img, readtime, description, buy } = data
 							
 							return (
-								<article class="flex">
+								<article class="flex flex-col md:flex-row">
 									<a href={`/libro/${slug}`} class="mb-2 xl:mb-0 transition hover:scale-110">
 										<img 
 											transition:name={`img-${slug}`}
 											class="mr-5 w-48 rounded" 
 											src={`/${img}`} 
-											alt={title} >
+											alt={title}>
 									</a>
 
-									<div class="flex flex-col justify-center">
-										<h2 transition:name={`title-${slug}`} class="mb-2 text-2xl font-bold leading-tight text-white">
+									<div class="flex flex-col justify-center md:ml-5">
+										<h2 transition:name={`title-${slug}`} class="mb-2 text-xl md:text-2xl font-bold leading-tight text-white">
 											{title}
 										</h2>
 										<p class="mb-4 text-gray-300 max-w-sm">{description}</p>
