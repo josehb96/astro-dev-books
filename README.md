@@ -4,7 +4,7 @@
 
 Vamos a utilizar la tecnología de content layer, porque en Astro podemos hacer muchas cosas interesantes con las llamadas colecciones. Y además son colecciones que podemos sacar de cualquier sitio, por ejemplo de una API externa, de archivos markdown, de un JSON, etc.
 
->[!Note]
+>[!note]
 >El frontmatter es información extra que puedes poner en un markdown
 
 ![image.png](.github/assets/image.png)
