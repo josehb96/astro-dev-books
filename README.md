@@ -995,16 +995,10 @@ export const prerender = true; // Indicamos que esta página se tiene que preren
 >[!Note]
 >Con el `slot="fallback"` podríamos usar un componente.
 
-<aside>
-<img src="https://www.notion.so/icons/warning_yellow.svg" alt="https://www.notion.so/icons/warning_yellow.svg" width="40px" />
-
-Warning
-
-El problema de usar el modo servidor de Astro es que obviamente necesitaremos un servidor, pero contamos con opciones como Deno Deploy o Cloudflare Pages que nos ofrecen serverless functions.
-
-Deno Deploy es una muy buena opción puesto que es muy fácil desplegarlo ahí y que cuenta con una capa gratuita bastante considerable.
-
-Ya que en definitiva, no haría falta que este el servidor abierto todo el rato.
+>[!Warning]
+>El problema de usar el modo servidor de Astro es que obviamente necesitaremos un servidor, pero contamos con opciones como Deno Deploy o Cloudflare Pages que nos ofrecen serverless functions.
+>Deno Deploy es una muy buena opción puesto que es muy fácil desplegarlo ahí y que cuenta con una capa gratuita bastante considerable.
+>Ya que en definitiva, no haría falta que este el servidor abierto todo el rato.
 
 </aside>
 
