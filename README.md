@@ -752,7 +752,6 @@ const url = buy[storeCountry]
 
 >[!TIP]
 >En Astro podemos usar <style is:inline> o <style is:global> dependiendo de si queremos que los estilos se apliquen sólo al componente o a toda la aplicación.
-
 >Esto también se puede aplicar a los scripts con <script is:inline> o <script is:global>.
 
 
