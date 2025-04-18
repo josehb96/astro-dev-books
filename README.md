@@ -1,5 +1,16 @@
 # Astro Dev Books 📚
 
+1. [Información de cada libro (MD)](#información-de-cada-libro-md)
+2. [Schema de libros](#schema-de-libros)
+3. [Renderizar libros](#renderizar-libros)
+4. [Páginas dinámicas](#páginas-dinámicas)
+5. [Plugin de Tailwind](#plugin-de-tailwind)
+6. [Animaciones entre páginas](#animaciones-entre-páginas)
+7. [Trabajando con variables .env & Cargar la valoración](#trabajando-con-variables-env--cargar-la-valoración)
+8. [Server Islands](#server-islands)
+9. [Cambiar de botón según la ubicación](#cambiar-de-botón-según-la-ubicación)
+10. [ProTip: Variables de entorno](#protip-variables-de-entorno)
+
 ## Información de cada libro (MD)
 
 Vamos a utilizar la tecnología de content layer, porque en Astro podemos hacer muchas cosas interesantes con las llamadas colecciones. Y además son colecciones que podemos sacar de cualquier sitio, por ejemplo de una API externa, de archivos markdown, de un JSON, etc.
@@ -751,9 +762,8 @@ const url = buy[storeCountry]
 ```
 
 >[!TIP]
->En Astro podemos usar <style is:inline> o <style is:global> dependiendo de si queremos que los estilos se apliquen sólo al componente o a toda la aplicación.
->Esto también se puede aplicar a los scripts con <script is:inline> o <script is:global>.
-
+>En Astro podemos usar `<style is:inline>` o `<style is:global>` dependiendo de si queremos que los estilos se apliquen sólo al componente o a toda la aplicación.
+>Esto también se puede aplicar a los scripts con `<script is:inline>` o `<script is:global>`.
 
 **Extra by ChatGPT**
 
