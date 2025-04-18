@@ -607,15 +607,9 @@ SHOW_BUY_BUTTON="true"
 SCORE_API_ENDPOINT="https://www.random.org/integers/?num=1&min=1&max=5&col=1&base=10&format=plain&rnd=new"
 ```
 
-<aside>
-<img src="https://www.notion.so/icons/alert_purple.svg" alt="https://www.notion.so/icons/alert_purple.svg" width="40px" />
-
-Important
-
-Las variables de entorno que definimos en el archivo .env son cadenas de texto, independendiente de si la ponemos sin “”:
-SHOW_BUY_BUTTON:true
-
-</aside>
+>[!Important]
+>Las variables de entorno que definimos en el archivo .env son cadenas de texto, independendiente de si la ponemos sin “”:
+>SHOW_BUY_BUTTON:true
 
 Con Astro podemos indicar de qué tipo son, dónde se pueden utilizar (en el contexto del servidor o del cliente) y qué acceso debe tener (si es público o es un secreto).
 
@@ -639,14 +633,8 @@ export default defineConfig({
 });
 ```
 
-<aside>
-<img src="https://www.notion.so/icons/info-alternate_blue.svg" alt="https://www.notion.so/icons/info-alternate_blue.svg" width="40px" />
-
-Note
-
-Con el comando npx astro sync podemos sincronizar las colecciones, el contenido, los tipos, optimiza las dependencias y ahí como que limpia la caché y te detecta otra vez bien los tipos.
-
-</aside>
+>[!Note]
+>Con el comando npx astro sync podemos sincronizar las colecciones, el contenido, los tipos, optimiza las dependencias y ahí como que limpia la caché y te detecta otra vez bien los tipos.
 
 Ahora vamos a leer dichas variables de entorno y a utilizarlas para entre otras cosas cargar una valoración aleatoria para los libros.
 
@@ -762,16 +750,11 @@ const url = buy[storeCountry]
 </a>
 ```
 
-<aside>
-<img src="https://www.notion.so/icons/light-bulb_green.svg" alt="https://www.notion.so/icons/light-bulb_green.svg" width="40px" />
+>[!TIP]
+>En Astro podemos usar <style is:inline> o <style is:global> dependiendo de si queremos que los estilos se apliquen sólo al componente o a toda la aplicación.
 
-Tip
+>Esto también se puede aplicar a los scripts con <script is:inline> o <script is:global>.
 
-En Astro podemos usar <style is:inline> o <style is:global> dependiendo de si queremos que los estilos se apliquen sólo al componente o a toda la aplicación.
-
-Esto también se puede aplicar a los scripts con <script is:inline> o <script is:global>.
-
-</aside>
 
 **Extra by ChatGPT**
 
@@ -856,14 +839,9 @@ Para ello podemos usar las Server Islands de Astro.
 
 Estas nos sirven para decir que un componente queremos que se renderice en el servidor.
 
-<aside>
-<img src="https://www.notion.so/icons/alert_purple.svg" alt="https://www.notion.so/icons/alert_purple.svg" width="40px" />
 
-Important
-
-Cuando usamos `server:defer` en un componente de Astro lo que está haciendo a nivel interno es que haya un elemento vacío y cuando el servidor lo renderice le va a devolver el HTML y lo va a incrustar ahí. Lo cual va a hacer que sea mucho más performante, mucho mejor y que pueda devolver esto al usuario mucho antes.
-
-</aside>
+>[!Important]
+>Cuando usamos `server:defer` en un componente de Astro lo que está haciendo a nivel interno es que haya un elemento vacío y cuando el servidor lo renderice le va a devolver el HTML y lo va a incrustar ahí. Lo cual va a hacer que sea mucho más performante, mucho mejor y que pueda devolver esto al usuario mucho antes.
 
 Lo bueno de este sistema es que podemos usar los `fallbacks`, es decir, que renderice algo mientras se está haciendo lo del servidor.
 
@@ -1015,14 +993,8 @@ export const prerender = true; // Indicamos que esta página se tiene que preren
 </Layout>
 ```
 
-<aside>
-<img src="https://www.notion.so/icons/info-alternate_blue.svg" alt="https://www.notion.so/icons/info-alternate_blue.svg" width="40px" />
-
-Note
-
-Con el `slot="fallback"` podríamos usar un componente.
-
-</aside>
+>[!Note]
+>Con el `slot="fallback"` podríamos usar un componente.
 
 <aside>
 <img src="https://www.notion.so/icons/warning_yellow.svg" alt="https://www.notion.so/icons/warning_yellow.svg" width="40px" />
@@ -1135,14 +1107,8 @@ Así que en nuestro caso, vamos a optar por el adaptador de Vercel:
 
 Ejecutamos **npx astro add vercel**
 
-<aside>
-<img src="https://www.notion.so/icons/info-alternate_blue.svg" alt="https://www.notion.so/icons/info-alternate_blue.svg" width="40px" />
-
-Note
-
-Dependiendo de dónde lo queramos desplegar vamos a tener que usar un adaptador diferente. Vercel, Netlify, Cloudflare, etc.
-
-</aside>
+>[!Note]
+>Dependiendo de dónde lo queramos desplegar vamos a tener que usar un adaptador diferente. Vercel, Netlify, Cloudflare, etc.
 
 Pero tras instalar el adaptador de Vercel en nuestro proyecto de Astro y desplegar de nuevo no sale el error de que nos falta la variable de entorno “SCORE_API_ENDPOINT”: 
 
@@ -1152,20 +1118,8 @@ Normalmente la mayoría de la gente iría a la sección de variables de entorno 
 
 ![image.png](.github/assets/image%209.png)
 
-<aside>
-<img src="https://www.notion.so/icons/light-bulb_green.svg" alt="https://www.notion.so/icons/light-bulb_green.svg" width="40px" />
+>[!TIP]
+>Pero lo increíble es que podemos copiar el contenido del fichero y pegarlo entero de una sola vez pegándolo en el input de la primera key.
 
-Tip
-
-Pero lo increíble es que podemos copiar el contenido del fichero y pegarlo entero de una sola vez pegándolo en el input de la primera key.
-
-</aside>
-
-<aside>
-<img src="https://www.notion.so/icons/light-bulb_green.svg" alt="https://www.notion.so/icons/light-bulb_green.svg" width="40px" />
-
-Tip
-
-No es imprescindible, pero es recomendable usar dobles comillas para indicar los valores en las variables de entorno, porque sino podríamos poner un `false` y confundirnos pensando que se refiere al valor booleano en lugar de a una cadena de texto.
-
-</aside>
+>[!TIP]
+>No es imprescindible, pero es recomendable usar dobles comillas para indicar los valores en las variables de entorno, porque sino podríamos poner un `false` y confundirnos pensando que se refiere al valor booleano en lugar de a una cadena de texto.
