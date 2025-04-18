@@ -4,14 +4,8 @@
 
 Vamos a utilizar la tecnología de content layer, porque en Astro podemos hacer muchas cosas interesantes con las llamadas colecciones. Y además son colecciones que podemos sacar de cualquier sitio, por ejemplo de una API externa, de archivos markdown, de un JSON, etc.
 
-<aside>
-<img src="https://www.notion.so/icons/info-alternate_blue.svg" alt="https://www.notion.so/icons/info-alternate_blue.svg" width="40px" />
-
-Note
-
-El frontmatter es información extra que puedes poner en un markdown
-
-</aside>
+>[!Note]
+>El frontmatter es información extra que puedes poner en un markdown
 
 ![image.png](.github/assets/image.png)
 
@@ -50,14 +44,8 @@ Vamos a explicar qué atributos tiene nuestra colección.
 
 Así que dentro del directorio `content` vamos a crear un nuevo archivo llamado `config.ts` 
 
-<aside>
-<img src="https://www.notion.so/icons/info-alternate_blue.svg" alt="https://www.notion.so/icons/info-alternate_blue.svg" width="40px" />
-
-Note
-
-El archivo `src/content/config.ts` es opcional. Sin embargo, si eliges no definir tus colecciones, deshabilitarás algunas de sus mejores características como la validación del esquema del frontmatter o la generación automática de tipos de datos en TypeScript.
-
-</aside>
+>[!Note]
+>El archivo `src/content/config.ts` es opcional. Sin embargo, si eliges no definir tus colecciones, deshabilitarás algunas de sus mejores características como la validación del esquema del frontmatter o la generación automática de tipos de datos en TypeScript.
 
 **config.ts**
 
@@ -86,14 +74,8 @@ export const collections = { books }
 
 Ahora vamos a ir a nuestro `index.astro`y mostrar la colección, es decir, leer la colección.
 
-<aside>
-<img src="https://www.notion.so/icons/info-alternate_blue.svg" alt="https://www.notion.so/icons/info-alternate_blue.svg" width="40px" />
-
-Note
-
-La propiedad slug contiene el nombre del fichero sin la extensión
-
-</aside>
+>[!Note]
+>La propiedad slug contiene el nombre del fichero sin la extensión
 
 **index.astro**
 
@@ -158,14 +140,8 @@ Y esto se debe a que no hemos creado las páginas de los libros.
 
 Vamos a crear una página con una ruta dinámica, porque cada libro tiene un identificador diferente.
 
-<aside>
-<img src="https://www.notion.so/icons/info-alternate_blue.svg" alt="https://www.notion.so/icons/info-alternate_blue.svg" width="40px" />
-
-Note
-
-La función `getStaticPaths` tiene que devolver un array con todas las rutas que queremos que respondan con algo, y qué información debe tener cada una de las rutas. 
-
-</aside>
+>[!Note]
+>La función `getStaticPaths` tiene que devolver un array con todas las rutas que queremos que respondan con algo, y qué información debe tener cada una de las rutas. 
 
 **[id].astro**
 
@@ -507,14 +483,8 @@ Básicamente lo que estamos haciendo es crear una asociación de 2 páginas dist
 
 Automáticamente el navegador entiende que estos 2 elementos son el mismo y lo que hace es moverlo entre una página y otra, es decir, lo que hace es transicionar el elemento entre una página y otra.
 
-<aside>
-<img src="https://www.notion.so/icons/alert_purple.svg" alt="https://www.notion.so/icons/alert_purple.svg" width="40px" />
-
-Important
-
-No es una SPA. Esto es CSS.
-
-</aside>
+>[!Important]
+>No es una SPA. Esto es CSS.
 
 Esto mismo lo podemos hacer con otros elementos, no solo con imágenes, para verlo vamos a hacerlo con el título.
 
@@ -625,14 +595,8 @@ const { Content } = await render(book);
 </Layout>
 ```
 
-<aside>
-<img src="https://www.notion.so/icons/light-bulb_green.svg" alt="https://www.notion.so/icons/light-bulb_green.svg" width="40px" />
-
-Tip
-
-No mover todos los elementos de una pantalla, porque sino va a quedar mal. Con que movamos uno en concreto ya está.
-
-</aside>
+>[!Tip]
+>No mover todos los elementos de una pantalla, porque sino va a quedar mal. Con que movamos uno en concreto ya está.
 
 ## Trabajando con variables .env & Cargar la valoración
 
