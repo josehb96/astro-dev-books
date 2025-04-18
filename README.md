@@ -1,4 +1,4 @@
-# Curso Astro 5: Server Islands, View Transitions + Aplicación
+# Astro Dev Books
 
 ## Información de cada libro (MD)
 
